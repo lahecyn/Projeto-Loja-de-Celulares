@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lojas Smart</title>
+    <title>Parcelamento - Lojas Smart</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2cd466465f.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-        <nav class="navbar navbar-expand-lg navbar-color fixed-top">
+
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg navbar-color fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand p-0 m-0" href="index.html">
         <img id="logosomente" src="/imagens/logoonlyblack.png" alt="Logo">
@@ -45,59 +44,94 @@
     </div>
   </div>
 </nav>
-</div>
-<footer class="footer fixed-bottom">
-    <div class="footer-container">
-        
-        <div class="footer-logo">
-            <img src="/imagens/logoonlywhite.png" alt="Logo Lojas Smart">
-            <p>Lojas Smart</p>
-            <span>Tecnologia de forma simples e inteligente.</span>
-        </div>
 
-        <div class="footer-links">
-            <h3>Navegação</h3>
+<main class="pagina-js flex-grow-1">
 
-            <a href="index.html">Início</a>
-            <a href="devs.html">Apresentação dos coders</a>
-            <a href="aparelhos.html">Opções de Aparelhos</a>
-            <a href="comparacao.html">Comparação de Modelos</a>
-        </div>
+    <div class="titulo-js">
+        <span>JAVASCRIPT</span>
+        <h1>Parcelamento de aparelhos</h1>
+        <p>Calcule o valor das parcelas de um aparelho.</p>
+    </div>
 
-        <div class="footer-links">
-            <h3>Recursos</h3>
+    <div class="problema-js">
 
-            <a href="estoque.html">Controle de estoque</a>
-            <a href="rankingdeprecos.html">Ranking de preços</a>
-            <a href="rankingmaisvendidos.html">Ranking dos mais vendidos</a>
-        </div>
+        <h2>Calcular parcelamento</h2>
 
-        <div class="footer-contact">
-            <h3>Contato</h3>
-            <a href="https://api.whatsapp.com/send/?phone=5589994171821&text&type=phone_number&app_absent=0" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
-                WhatsApp
-            </a>
+        <p>
+            Informe o preço do aparelho e a quantidade de parcelas
+            para descobrir quanto será pago em cada parcela.
+        </p>
 
-            <a href="https://www.instagram.com/lojassmartflo" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-                Instagram
-            </a>
+        <label>Preço do aparelho</label>
+        <input type="number" id="preco" placeholder="Ex: 1500">
 
-            <a href="https://www.google.com/maps/place/BR-343,+1025+-+Irapu%C3%A3+II,+Floriano+-+PI,+64800-490/data=!4m2!3m1!1s0x7837cded65110ab:0x494843c5d1ee0889?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI1LjMwLjMYACCenQoqmQEsOTQyNzgzMDYsOTQyNjc3MjcsOTQyNzUzMTMsOTQyMjMyOTksOTQyMTY0MTMsOTQyODA1NzYsOTQyMTI0OTYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTc1MjMsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsNDcwODQzOTMsOTQyMTMyMDAsOTQyNTgzMjVCAkJS&skid=82f6af77-b675-474b-b1d2-2d7635161704&g_st=awb" target="_blank">
-                <i class="fa-solid fa-location-dot"></i>
-                Nosso endereço
-            </a>
-        </div>
+        <label>Quantidade de parcelas</label>
+        <input type="number" id="parcelas" placeholder="Ex: 10">
+
+        <button onclick="calcularParcelamento()">Calcular</button>
+
+        <div id="resultadoParcelamento" class="resultado-js"></div>
 
     </div>
 
-    <div class="footer-bottom">
-        <p>© 2026 Lojas Smart. Todos os direitos reservados.</p>
-        <p>Desenvolvido por lahecin229 e henriquedearraial.</p>
-    </div>
-</footer>
-```
+</main>
 
+<footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+                <img src="/imagens/logoonlywhite.png" alt="Logo Lojas Smart">
+                <p>Lojas Smart</p>
+                <span>Tecnologia de forma simples e inteligente.</span>
+            </div>
+
+            <div class="footer-links">
+                <h3>Navegação</h3>
+
+                <a href="index.html">Início</a>
+                <a href="devs.html">Apresentação dos coders</a>
+                <a href="aparelhos.html">Opções de Aparelhos</a>
+                <a href="comparacao.html">Comparação de Modelos</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Recursos</h3>
+
+                <a href="estoque.html">Controle de estoque</a>
+                <a href="rankingdeprecos.html">Ranking de preços</a>
+                <a href="rankingmaisvendidos.html">Ranking dos mais vendidos</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contato</h3>
+
+                <a href="https://api.whatsapp.com/send/?phone=5589994171821&text&type=phone_number&app_absent=0" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+
+                <a href="https://www.instagram.com/lojassmartflo" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                    Instagram
+                </a>
+
+                <a href="https://www.google.com/maps/place/BR-343,+1025+-+Irapu%C3%A3+II,+Floriano+-+PI,+64800-490/data=!4m2!3m1!1s0x7837cded65110ab:0x494843c5d1ee0889" target="_blank">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Nosso endereço
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Lojas Smart. Todos os direitos reservados.</p>
+            <p>Desenvolvido por lahecin229 e henriquedearraial.</p>
+        </div>
+
+    </footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>

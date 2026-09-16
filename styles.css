@@ -553,3 +553,146 @@ nav.navbar {
     }
 
 }
+.pagina-js {
+    padding: 110px 25px 60px;
+    background-color: #F5F5F5;
+    font-family: "Roboto Slab", serif;
+}
+
+.titulo-js {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-js span {
+    color: #F75928;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.titulo-js h1 {
+    color: #020202;
+    font-size: 2.4rem;
+    margin: 8px 0;
+}
+
+.titulo-js p {
+    color: #666;
+}
+
+.problema-js {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.problema-js h2 {
+    color: #020202;
+    margin-top: 0;
+}
+
+.problema-js > p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.problema-js label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #020202;
+    font-weight: bold;
+}
+
+.problema-js input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.problema-js input:focus {
+    border-color: #F75928;
+}
+
+.problema-js button {
+    margin-top: 25px;
+    padding: 11px 20px;
+    background-color: #F75928;
+    color: #020202;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.problema-js button:hover {
+    background-color: #020202;
+    color: #FFFFFF;
+}
+
+.resultado-js {
+    margin-top: 25px;
+    padding: 18px;
+    background-color: #F5F5F5;
+    border-left: 4px solid #F75928;
+    color: #020202;
+    line-height: 1.8;
+}
+
+.comparacao-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.comparacao-inputs h3 {
+    color: #F75928;
+    font-size: 1.1rem;
+}
+
+.ranking-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ranking-inputs div {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    gap: 10px;
+}
+
+.ranking-inputs input {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .pagina-js {
+        padding: 100px 20px 40px;
+    }
+
+    .titulo-js h1 {
+        font-size: 2rem;
+    }
+
+    .problema-js {
+        padding: 25px;
+    }
+
+    .comparacao-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    .ranking-inputs div {
+        grid-template-columns: 1fr;
+    }
+
+}
